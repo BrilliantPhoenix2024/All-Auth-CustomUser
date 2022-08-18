@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # Third-Party APPs
     'allauth',
     'allauth.account',
-    'crispy_forms'
+    'crispy_forms',
 
     # Local APPs
     'accounts',
@@ -64,7 +64,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,6 +149,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # accounts config
 AUTH_USER_MODEL = 'accounts.CustomUser'
+# LOGIN_REDIRECT_URL = '#'
+# LOGOUT_REDIRECT_URL = '#'
 
 # Crispy_Forms config
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
