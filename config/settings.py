@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Third-Party APPs
     'allauth',
     'allauth.account',
+    'crispy_forms'
 
     # Local APPs
     'accounts',
@@ -148,3 +149,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # accounts config
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# Crispy_Forms config
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
