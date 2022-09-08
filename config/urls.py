@@ -19,4 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    # Rosetta (i18n)
+    path('rosetta/', include('rosetta.urls')),
 ]
